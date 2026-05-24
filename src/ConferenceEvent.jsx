@@ -41,15 +41,7 @@ const handleDecrementAvQuantity = (index) => {
 };
 
 const handleMealSelection = (index) => {
-    const item = mealsItems[index];
-    if (item.selected && item.type === "mealForPeople") {
-        // Ensure numberOfPeople is set before toggling selection
-        const newNumberOfPeople = item.selected ? numberOfPeople : 0;
-        dispatch(toggleMealSelection(index, newNumberOfPeople));
-    }
-    else {
-        dispatch(toggleMealSelection(index));
-    }
+    dispatch(toggleMealSelection(index));
 };
 
 const getItemsFromTotalCost = () => {
